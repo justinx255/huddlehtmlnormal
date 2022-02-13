@@ -1,0 +1,258 @@
+:root {
+	--Pink: hsl(322, 100%, 66%);
+	--PaleCyan: hsl(193, 100%, 96%);
+	--DarkCyan: hsl(192, 100%, 9%);
+	--Blue: hsl(208, 11%, 55%);
+	--White: #ffffff;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+
+.header {
+	background-color: #edfbfe;
+	background-image: url(./images/bg-hero-mobile.svg);
+	padding: 30px 0;
+}
+.header-top {
+	margin: 0 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.try {
+	background-color: var(--White);
+	border-radius: 15px;
+	color: var(--DarkCyan);
+	font-size: 1rem;
+	width: 200px;
+	height: 40px;
+	border: none;
+	box-shadow: 0 5px 3px rgba(0, 0, 0, 0.45);
+}
+.header-body {
+	margin: 3% 5% 2% 5%;
+	display: grid;
+	grid-template-columns: 45% 80%;
+	width: 80%;
+	grid-column-gap: 5%;
+}
+.header-body .header-right > img {
+	width: 80%;
+}
+.header-body .header-left {
+	margin: 10% 2.5%;
+}
+.header-title {
+	font-size: 2.5rem;
+	color: var(--DarkCyan);
+}
+.header-para {
+	line-height: 1.5;
+	color: var(--DarkCyan);
+	font-size: 1.15rem;
+}
+.header-get-started {
+	background-color: var(--Pink);
+	border-radius: 25px;
+	color: var(--White);
+	font-size: 1rem;
+	width: 250px;
+	height: 60px;
+	border: none;
+	padding: 20px;
+}
+
+.main {
+	background-color: var(--White);
+	padding: 20px 20px 15%;
+}
+card {
+	transition: 0.3s;
+	width: 85%;
+	margin: 2% 7.5%;
+	height: 500px;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.35);
+	border-radius: 15px;
+}
+card > div {
+	padding: 30px;
+	margin: 5%;
+}
+.card-cont {
+	margin: 9% 3%;
+}
+.card-title {
+	font-size: 2rem;
+	color: var(--DarkCyan);
+}
+.card-para {
+	color: var(--Blue);
+	line-height: 1.5;
+	width: 90%;
+}
+.main card img {
+	width: 100%;
+}
+.footer-card {
+	position: absolute;
+	background-color: var(--White);
+	transition: 0.3s;
+	width: 60%;
+	margin: 2% 20%;
+	height: 30%;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.35);
+	border-radius: 15px;
+	z-index: 1;
+	bottom: -280%;
+	text-align: center;
+}
+.footer-card-title {
+	margin-top: 5%;
+	font-size: 2rem;
+	color: var(--DarkCyan);
+	font-weight: 700;
+}
+.footer-card-button {
+	height: 60px;
+	width: 40%;
+	border-radius: 25px;
+	border: none;
+	background-color: var(--Pink);
+	color: var(--White);
+	font-size: 1.25rem;
+	padding: 20px;
+	text-align: center;
+	font-weight: 600;
+}
+footer {
+	background-color: var(--DarkCyan);
+	color: #ffffff;
+	margin: 0;
+}
+.footer-title {
+	padding: 12% 10% 0;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5rem;
+}
+.footer-body {
+	padding: 0 10% 10%;
+	width: 80%;
+	display: grid;
+	grid-template-columns: 40% 30% 30% 30%;
+	grid-column-gap: 3%;
+}
+.icon {
+	background-color: transparent;
+	border-radius: 50%;
+	border: 1px solid white;
+	padding: 10px;
+}
+ul {
+	list-style: none;
+}
+ul > li {
+	padding: 10px;
+	display: flex;
+}
+.footer-para {
+	padding: 0 20px;
+	width: 80%;
+}
+.footer-icon-location {
+	width: 7%;
+	height: 1%;
+}
+.copy {
+	margin: 0 0% 0 70%;
+	width: 50%;
+}
+@media screen and (max-width: 786px) {
+	html {
+		overflow-x: hidden;
+	}
+	.header {
+		padding: 0;
+	}
+	.header-top {
+		margin: 0;
+	}
+	.logo {
+		width: 50%;
+		margin: 2% 3%;
+	}
+	.try {
+		width: 25%;
+		height: 30px;
+		font-size: 1rem;
+		margin-right: 2%;
+	}
+	.header-body {
+		margin-left: 10%;
+		grid-template-columns: minmax(100%, 1fr);
+		/* width: 100%; */
+		text-align: center;
+		grid-column-gap: 5%;
+		padding-bottom: 20px;
+	}
+	card {
+		flex-direction: column;
+		margin: 2% 7%;
+		height: 600px;
+	}
+	card > .card-cont {
+		order: 1;
+	}
+	card > div {
+		padding: 10px;
+		text-align: center;
+	}
+	.footer-body {
+		grid-template-columns: 100%;
+		width: 100%;
+		padding: 0 0% 10%;
+	}
+	.footer-card {
+		width: 80%;
+		margin: 2% 4%;
+		height: 32%;
+		bottom: -370%;
+		font-size: 1.5rem;
+	}
+	.main {
+		padding: 20px 20px 40%;
+	}
+	.footer-card-button {
+		width: 80%;
+	}
+	.footer-title {
+		padding: 120px 35px 10px;
+		font-size: 4rem;
+	}
+	.footer-para {
+		width: 100%;
+	}
+	.footer-icon-location {
+		width: 5%;
+		height: 1%;
+	}
+	.straight {
+		margin: 0 30%;
+		text-align: center;
+	}
+	.straight > .icon {
+		margin-left: 20px;
+	}
+	.copy {
+		margin: 0 0% 0 20%;
+		width: 100%;
+	}
+}
